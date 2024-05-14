@@ -2,31 +2,81 @@ html {
   height: 100%;
   width: 100%;
 }
-h2{
-  color: #8c25f4;
-  background-color: #f89696;
+
+* {
+  margin: 0;
+  padding: 0;
 }
-body{
-  background-color: #d3c0c0;
-  border: 1px solid #b77b7b;
+
+h2 {
+  color: #e0e0e0;
+  background-color: #1e1a1a;
+  text-align: center;
+  /* text-decoration: underline; */
 }
-footer{
+
+body {
+  background-color: #080707;
+  border: 1px solid #a59797;
+}
+
+footer {
   background-color: black;
   margin: 0;
   padding: 7px;
   color: white;
   text-align: center;
 }
-.tableCls{
-  margin: 0;
-  background-color:  #f89696;
+
+.tableCls {
+  background-color: #171616;
+  position: relative;
 }
-a{
+
+.header {
+  position: sticky;
+}
+
+a {
   color: #f8f6f2;
   text-decoration: none;
   font-size: 20px;
   font-style: normal;
   line-height: 20px;
-  font-weight: bolder;    
+  font-weight: bolder;
   font-family: Arial, sans-serif;
+}
+
+.audio {
+  margin: 5px;
+}
+
+.movies {
+  margin: 5px;
+  padding: 5px;
+  height: 300px;
+  width: 200px;
+}
+
+.container {
+  border: 1px solid white;
+  background-color: white;
+  position: relative;
+  height: 5000px;
+}
+
+img {
+  margin: 20px;
+}
+
+#movie1 {
+  /* position: relative;
+  top: 100px; */
+  /* position: absolute;
+  top: 100px; */
+  /* position: fixed; */
+}
+
+#movie4 {
+  /* position: fixed; */
 }
