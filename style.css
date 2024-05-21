@@ -10,18 +10,22 @@ html {
 
 h2 {
   color: #e0e0e0;
-  background-color: #1e1a1a;
+  background-color: #000000;
   text-align: center;
   /* text-decoration: underline; */
 }
 
 body {
-  background-color: #080707;
+  background-color: #000000;
   border: 1px solid #a59797;
 }
+
 /* Header */
-.header {
-  position: sticky;
+
+.containerNav {
+  display: flex;
+  justify-content: space-evenly;
+  /* background-color: white; */
 }
 
 ul {
@@ -29,26 +33,32 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #000000;
 }
 
 li {
   float: left;
 }
+
 li a {
-  display: block;
+  display: flex;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
+
 li a:hover {
   background-color: #111;
 }
 
 li a img {
-  height: 20px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
+  border-radius: 100px;
+  /* float: left; */
+  align-self: flex-start;
+  background-color: #ac2043;
 }
 
 a {
@@ -61,21 +71,70 @@ a {
   font-family: Arial, sans-serif;
 }
 
+/* Home */
+.containerHome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Home {
+  height: 300px;
+  width: 60%;
+  border-radius: 10px;
+  position: relative;
+  animation-name: rightLeftMovement;
+  animation-duration: 5s; 
+  animation-delay: 10s;
+  animation-iteration-count: infinite;
+  /* animation-timing-function: linear; */
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  /* animation-direction: alternate; */
+  animation-direction: alternate-reverse;
+  animation-fill-mode: backwards;
+  /* animation-fill-mode: forwards;
+ 
+  /* @keyframes duration | easing-function | delay |
+  iteration-count | direction | fill-mode | play-state | name */
+  /* animation: 5s ease-in 10s infinite reverse both running slidein; */
+}
+
+@keyframes rightLeftMovement {
+  from {
+    top: 0;
+    left: 0;
+  }
+
+  to {
+    top: 0;
+    left: 200px;
+  }
+}
+
+
 /* MUSIC */
 .containerAudio {
   display: flex;
-  margin: 5px;
+  margin: 20px;
+  flex-wrap: wrap;
   flex-direction: row;
-  /* align-items: center; */
+  align-items: center;
+  justify-content: center;
 }
 
 .audio {
   padding: 2px;
+  height: 30px;
+  width: 40%;
+  margin-left: 25px;
 }
 
 /* Video */
 .containerVideos {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .Videos {
@@ -86,7 +145,7 @@ a {
 
 /* Movie */
 .containerMovie {
-  border: 1px solid white;
+  /* border: 1px solid white; */
   background-color: #151414;
   /* position: relative; */
   /* height: 800px; */
@@ -98,18 +157,22 @@ a {
   flex-wrap: wrap;
   /* flex-wrap: nowrap; */
   /* flex-wrap: wrap-reverse; */
-  /* justify-content: center; */
+  justify-content: center;
   /* justify-content: start; */
   /* justify-content: end; */
   /* justify-content: space-around; */
   /* justify-content: space-between; */
   /* justify-content: space-evenly; */
-  /* align-items: center; */
+  align-items: center;
   /* align-items: stretch; */
   /* align-items: start; */
   /* align-items: end; */
   /* align-content: end; */
   align-content: start;
+
+  @media (min-width: 100px) and (max-width: 300px) {
+    flex-direction: column;
+  }
 }
 
 .movies {
@@ -146,7 +209,30 @@ img {
   /* flex-shrink: 5; */
 }
 
+/* MovieSuggestion  */
+.containerSuggestion {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 
+  @media (max-width: 600px) {
+    background-color: #0b0909;
+  }
+
+  @media (min-width: 600px) {
+    background-color: #403030;
+  }
+}
+
+.movies {
+  /* box-shadow: 1px 3px #807194; */
+  /* box-shadow: -2px 3px #807194; */
+  box-shadow: -1px -3px 10px #6812d9;
+  /* box-shadow: -1px -3px 8px 1px #6812d9; */
+
+}
 
 /* Footer */
 footer {
